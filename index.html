@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-image:url(.jpg);
+        }
+        .ptag{
+            border-style: solid;
+            border-color: rgb(255, 198, 198);
+            color:rgb(255, 185, 185);
+            padding: 3em;
+            margin: 2em;
+            border-width: 0.5em;
+            font-size: 1em;
+            font-family:cursive;
+            text-align: center;
+            
+
+        }
+        header{
+            text-align: center;
+            font-style: oblique;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: rgb(250, 174, 174);
+            margin:1em;
+            padding: 1em;
+            word-spacing: 0.5em;
+
+        }
+        img{
+            border-color: rgb(248, 191, 191);
+            border-style: solid;
+            border-width: 0.5em;
+            width: 100%;
+            height: auto;
+        }
+        a{
+            color: black;
+        }
+        h4{
+            font-family:cursive;
+            color: rgb(253, 175, 187);
+        }
+    </style>
+</head>
+<body>
+    <a href="ani.html">  Home </a>
+    <header> <h1>Contact us at-</h1></header>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <img src="ve.jpg" class="image-thumbnail">
+            </div>
+            <div class="col-sm-6">
+               <p class="ptag">
+                Phone : 040-9876-5432<br>
+                Our Insta Handle : @anihub<br>
+                Our Facebook Page : anihub_welcome<br>
+
+               </p>
+               <p class="ptag">
+                   WHAT DID YOU THINK ABOUT OUR PAGE , WE WOULD LIKE TO KNOW ALL ABOUT IT <br>
+                   <div class="form-group" style="text-align: center;">
+                       <h4>Enter You're Name: </h4>
+                       <input type="text" id="cusname" placeholder="...name...">
+                       <br>
+                       <br>
+                    <label for="sel" ><h4>Rate Us!</h4></label>
+                    <select class="form-control" id="sel">
+                        <option>How Was Our Service?</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                    </select>
+                  </div>
+          
+                   
+               </p>
+               <p class="ptag">
+                   <br><h4>
+                   Drop In Your E-mail Id To Stay Updated !!</h4><br>
+                   <div class="form-group">
+                    <label for="eid"><h4>Email Address:</h4></label>
+                    <input type="email" class="form-control" id="eid" placeholder="name@example.com">
+                   </div>
+
+               </p>
+               <input type="submit" value="Submit" onclick="display();">
+
+
+            </div>
+        </div>
+    </div>
+    <div class="ptag">
+        <h1 style="color: rgb(255, 199, 199);text-align: center;">Our Customer Reviews</h1>
+        <br> <h6 id="disp"></h6>
+    </div>
+     <script>
+        function display()
+        {
+            let data = {
+                name : document.getElementById('cusname').value,
+                rate : document.getElementById('sel').value,
+                eid : document.getElementById('eid').value
+            };
+            console.log(data);
+            document.getElementById('disp').append(data.name+"  rated  "+data.rate+",");
+
+            
+        }
+    </script> 
+</body>
+</html>
